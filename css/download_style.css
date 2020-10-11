@@ -1,0 +1,72 @@
+header {
+  background-color: #f5fcfd;
+  background-image: none; }
+  header .navbar .form-inline a {
+    font-weight: 600;
+    color: #929292; }
+    header .navbar .form-inline a:hover {
+      color: #0f7bff; }
+    header .navbar .form-inline a:focus {
+      color: #0f7bff; }
+  header .navbar .sign_button {
+    background: #0f7bff;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 50px;
+    width: 155px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    outline-style: none;
+    outline-width: 0;
+    transition: all 0.3s ease; }
+    header .navbar .sign_button:hover {
+      background-color: transparent;
+      color: #0f7bff;
+      border: 2px solid #0f7bff; }
+    header .navbar .sign_button:focus {
+      background-color: transparent;
+      color: #0f7bff;
+      border: 2px solid #0f7bff; }
+
+.download {
+  text-align: center; }
+  .download img {
+    margin-top: 130px; }
+  .download h1 {
+    margin-top: 45px; }
+  .download p {
+    margin-top: 25px;
+    margin-bottom: 55px; }
+    .download p a {
+      color: #0f7bff; }
+
+.free_trial {
+  border-bottom: none;
+  background-color: white; }
+  .free_trial h1 {
+    margin-top: 15px; }
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  header .navbar {
+    background-color: #f5fcfd; }
+    header .navbar .navbar-brand {
+      color: #0f7bff; } }
+@media only screen and (max-width: 600px) {
+  .download img {
+    width: 290px;
+    margin-top: 30px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .navbar .form-inline a {
+    color: white; }
+    header .navbar .form-inline a:hover {
+      color: honeydew; }
+  header .navbar .sign_button:hover {
+    background-color: white;
+    color: #0f7bff;
+    border: 2px solid #0f7bff; }
+
+  .free_trial .col-lg-4 h1 {
+    font-size: 1.9rem; } }
+
+/*# sourceMappingURL=download_style.css.map */

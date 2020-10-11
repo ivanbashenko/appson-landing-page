@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AppSon</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style_preproc1.css">
+    <link rel="stylesheet" href="css/media_queries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 500) {
+                    $('#scroll_top').show();
+                } else {
+                    $('#scroll_top').hide();
+                }
+            });
+
+            $('#scroll_top').click(function(){
+                $('html, body').animate({scrollTop: 0}, 300);
+                return false;
+            });
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <script src="assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script>
+        function sweetalertclick() {
+            Swal.fire({
+                title: 'AppSon',
+                showCloseButton: true,
+                html: '<input type="text" id="login" class="login" placeholder="Email Address"></input>' +
+                    '<input type="password" id="password" class="password" placeholder="Password"></input>',
+                confirmButtonText: 'Sign Up',
+                preConfirm: () => {
+                    let login = Swal.getPopup().querySelector('#login').value
+                    let password = Swal.getPopup().querySelector('#password').value
+                    if (login === '' || password === '') {
+                        Swal.showValidationMessage(`Login/Password empty`)
+                    }
+                }
+            })
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:30,
+                dotsEach: 3,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:4.5
+                    }
+                }
+            });
+
+            $('.owl-carousel2').owlCarousel({
+                margin:30,
+                dots:false,
+                nav: true,
+                navText : ["",""],
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            })
+        });
+    </script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="https://kit.fontawesome.com/6e1e41fd84.js"></script>
+</head>
+<body>
+<a href="#" id="scroll_top" class="scroll" title="top">
+    <img src="images/arrow.png" alt="arrow">
+</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">AppSon</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="#">Home</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Pages</a>
+                    <button class="sign_button" type="button" onclick="sweetalertclick()">Sign Up</button>
+                </form>
+            </div>
+        </nav>
+        <div class="header_descriptions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h1>
+                            Best Desktop App for you
+                        </h1>
+                        <h2>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua.
+                        </h2>
+                        <div class="buttons_header">
+                            <a href="download.html" target="_blank">Download</a>
+                            <a href="download.html" target="_blank">Free Trial</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 d-none d-lg-block">
+                        <a data-fancybox="gallery" href="images/image_header.jpg">
+                            <img src="images/image_header.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="easy_keep">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <a class="easy_keep_image" data-fancybox="gallery" href="images/image_header.jpg">
+                            <img src="images/image_header.jpg">
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-xs-12 easy_keep_info">
+                        <h1>
+                            Easy Messaging
+                        </h1>
+                        <h2>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </h2>
+                        <div class="buttons_keep">
+                            <a href="#">Read More
+                                <img src="images/read_more.png" alt="#">
+                            </a>
+                        </div>
+                </div>
+                    <div class="col-lg-6 col-xs-12 easy_keep_info">
+                        <h1>
+                            Keep In Touch
+                        </h1>
+                        <h2>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </h2>
+                        <div class="buttons_keep">
+                            <a href="#">
+                                Read More
+                                <img src="images/read_more.png" alt="#">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <a class="easy_keep_image" id="last_image" data-fancybox="gallery" href="images/image_header.jpg">
+                            <img src="images/image_header.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app_features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title_block">
+                        <h1>App Features</h1>
+                        <img src="images/app_title_bg.png" alt="bg">
+                    </div>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</h2>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="app_features_blocks">
+                        <img src="images/clean_design.png" alt="cd">
+                        <h1>Clean Design</h1>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="app_features_blocks">
+                        <img src="images/fast_speed.png" alt="fs">
+                        <h1>Fast Speed</h1>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="app_features_blocks">
+                        <img src="images/messaging.png" alt="ms">
+                        <h1>Messaging</h1>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="app_features_blocks2">
+                        <img src="images/analysis.png" alt="an">
+                        <h1>Analysis</h1>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="app_features_blocks2">
+                        <img src="images/audio_recorder.png" alt="ar">
+                        <h1>Audio Recorder</h1>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="app_features_blocks2">
+                        <img src="images/customer_support.png" alt="cs">
+                        <h1>Customer Support</h1>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="counter d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1>User More Than 2M+</h1>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit</h2>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                    <div class="col">
+                        <h1>57K+</h1>
+                        <p>Download</p>
+                    </div>
+                    <div class="col">
+                        <h1>90K+</h1>
+                        <p>Happy Clients</p>
+                    </div>
+                        <div class="w-100"></div>
+                    <div class="col">
+                        <h1>4.8*</h1>
+                        <p>Rating</p>
+                    </div>
+                    <div class="col">
+                        <h1>9k+</h1>
+                        <p>Premium Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="screenshot d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title_block">
+                        <h1>Screenshots</h1>
+                        <img src="images/app_title_bg.png" alt="bg">
+                    </div>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel">
+            <a data-fancybox="gallery" href="images/image_header.jpg">
+                <img src="images/image_screenshot.jpg">
+            </a>
+            <a data-fancybox="gallery" href="images/image_header.jpg">
+                <img src="images/image_screenshot.jpg">
+            </a>
+            <a data-fancybox="gallery" href="images/image_header.jpg">
+                <img src="images/image_screenshot.jpg">
+            </a>
+            <a data-fancybox="gallery" href="images/image_header.jpg">
+                <img src="images/image_screenshot.jpg">
+            </a>
+            <a data-fancybox="gallery" href="images/image_header.jpg">
+                <img src="images/image_screenshot.jpg">
+            </a>
+            <a data-fancybox="gallery" href="images/image_header.jpg">
+                <img src="images/image_screenshot.jpg">
+            </a>
+            <a data-fancybox="gallery" href="images/image_header.jpg">
+                <img src="images/image_screenshot.jpg">
+            </a>
+        </div>
+    </div>
+    <div class="pricing">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h1>Pricing Plan</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+                    </p>
+                    <div class="col-lg-12">
+                        <button>Monthly</button>
+                        <button>Yearly</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan">
+                        <img src="images/standart_icon.png" class="icon_plan" alt="">
+                        <h1>Standart</h1>
+                        <div>
+                            <p>2gb Hosting</p>
+                            <p>10 Custom Domain</p>
+                            <p>SSD Hosting</p>
+                            <p>50 gb Bandwith</p>
+                            <p>Free Support</p>
+                        </div>
+                        <h2><span>$</span>19.00</h2>
+                        <div class="try_now">
+                            <a href="#">Try now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan">
+                        <img src="images/premium_icon.png" alt="">
+                        <h1>Premium</h1>
+                        <div>
+                            <p>2gb Hosting</p>
+                            <p>10 Custom Domain</p>
+                            <p>SSD Hosting</p>
+                            <p>50 gb Bandwith</p>
+                            <p>Free Support</p>
+                        </div>
+                        <h2><span>$</span>49.00</h2>
+                        <div class="try_now">
+                        <a href="#">Try now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="bubble d-flex align-items-end flex-column ">
+    <img class="justify-content-end" src="images/bubble.png" alt="bubble">
+</div>
+    <div class="testimonials d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                        <div class="top_bottom_image">
+                            <a data-fancybox="gallery" href="images/image_header.jpg">
+                                <img src="images/image_header.jpg" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a data-fancybox="gallery" href="images/image_header.jpg">
+                                <img src="images/image_header.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="top_bottom_image">
+                            <a data-fancybox="gallery" href="images/image_header.jpg">
+                                <img src="images/image_header.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <a data-fancybox="gallery" href="images/image_header.jpg">
+                                <img src="images/image_header.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                <div class="col-lg-6">
+                    <div class="owl-carousel2">
+                        <div class="item">
+                            <img src="images/testimonials_icon.png" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                            <h1>- Raisa Moni</h1>
+                            <h2>Envato Costumer</h2>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="latest_news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title_block">
+                        <h1>Latest News From Us</h1>
+                        <img src="images/app_title_bg.png" alt="bg">
+                    </div>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</h2>
+                </div>
+                <div class="col-lg-6">
+                    <a class="easy_keep_image" id="left_block_image" data-fancybox="gallery" href="images/image_header.jpg">
+                        <img src="images/image_header.jpg">
+                    </a>
+                    <a href="#">
+                        The master bedroom suite is phenomenally spacious
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                    <a href="#">
+                        Continue Reading
+                        <img src="images/read_more.png" alt="#">
+                    </a>
+                </div>
+                <div class="col-lg-6 right_block_news d-none d-lg-block">
+                    <div class="row">
+                        <div class="row">
+                        <div class="col-lg-4">
+                            <a class="easy_keep_image" id="right_block_image" data-fancybox="gallery" href="images/image_header.jpg">
+                                <img src="images/image_header.jpg">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#">
+                                The master bedroom suite is phenomenally spacious
+                            </a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <a class="easy_keep_image" id="right_block_image" data-fancybox="gallery" href="images/image_header.jpg">
+                                    <img src="images/image_header.jpg">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    The master bedroom suite is phenomenally spacious
+                                </a>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <a class="easy_keep_image" id="right_block_image" data-fancybox="gallery" href="images/image_header.jpg">
+                                    <img src="images/image_header.jpg">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    The master bedroom suite is phenomenally spacious
+                                </a>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 d-block d-lg-none">
+                    <button>
+                        More News
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="free_trial">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <h1>Try 30 Days Free Trial</h1>
+                    <p>No credit card required</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <button>
+                        Get started
+                        <img src="images/get_started.png" alt="#">
+                    </button>
+                </div>
+             </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                    <div class="col-lg-6">
+                        <h1>
+                            AppSon
+                        </h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. tempor incididunt ut labore
+                        </p>
+                        <div class="social_media">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-youtube"></a>
+                        </div>
+                    </div>
+                        <div class="col">
+                            <h1>
+                                Company
+                            </h1>
+                            <a href="">About Us</a>
+                            <a href="">Press</a>
+                            <a href="">Reviews</a>
+                            <a href="">Partners</a>
+                        </div>
+                        <div class="col">
+                            <h1>
+                                Blog
+                            </h1>
+                            <a href="">Finance</a>
+                            <a href="">Technology</a>
+                            <a href="">Mobile</a>
+                        </div>
+                        <div class="col">
+                            <h1>
+                                Integrations
+                            </h1>
+                            <a href="">Android App</a>
+                            <a href="">IOS App</a>
+                            <a href="">Windows App</a>
+                            <a href="">VR Box App</a>
+                        </div>
+                    </div>
+                </div>
+    </footer>
+    <div class="terms">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 col-md-6 order-xs-last">
+                        <p>
+                            © 2018 Copyright, All Rights Reserved by AppSon
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 order-xs-first">
+                        <a href="">Terms & Condition</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Help</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
